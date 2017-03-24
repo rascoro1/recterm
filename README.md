@@ -1,4 +1,6 @@
 ## recterm
+Record the terminal into a mp4 with audio
+![Demo](https://github.com/rascoro1/recterm/blob/master/github.gif)
 
 ### Motivation
 
@@ -46,7 +48,8 @@ apt-get install ffmpeg
 
 ### License
 
-Apache
+Apache.
+
 
 [`asciinema`]: https://asciinema.org/
 [`asciinema2gif`]: https://github.com/tav/asciinema2gif/
