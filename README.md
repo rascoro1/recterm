@@ -24,6 +24,7 @@ The .wav and .mp4 file will be generated in the 'test_terminal_session' director
 ```bash
 # Requires Homebrew installed. Find it at http://brew.sh/.
 # This command will install asciinema2gif and all dependencies.
+brew install asciinema
 brew install asciinema2gif
 brew install sox
 brew install ffmpeg
@@ -32,6 +33,7 @@ brew install ffmpeg
 #### Ubuntu
 
 ```bash
+apt-get install brew install asciinema
 apt-get install imagemagick gifsicle npm
 npm install --global phantomjs2
 apt-get install sox
