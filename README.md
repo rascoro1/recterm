@@ -28,7 +28,7 @@ brew install asciinema2gif
 brew install sox
 brew install ffmpeg
 ```
-Dependencies: sox Mac OSX: brew install sox Ubuntu: sudo apt-get install sox asciinema https://asciinema.org/ asciinema2gif https://github.com/tav/asciinema2gif
+
 #### Ubuntu
 
 ```bash
