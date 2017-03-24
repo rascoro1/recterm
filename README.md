@@ -43,13 +43,10 @@ apt-get install ffmpeg
 ### Credits
 
 * [@rascoro1]
+
 ### License
 
-Public domain.
-
-—
-Enjoy, tav <<tav@espians.com>>
-
+Apache
 
 [`asciinema`]: https://asciinema.org/
 [`asciinema2gif`]: https://github.com/tav/asciinema2gif/
