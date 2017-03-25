@@ -1,9 +1,13 @@
 ## recterm
 Record the terminal into a mp4 with audio
-Your Normal Gif
+### Normal Gif
 ![Demo](https://github.com/rascoro1/recterm/blob/master/github.gif)
-Youtube using recterm
+
+
+
+#### Youtube video created using recterm
 [![IMAGE ALT TEXT HERE](https://github.com/rascoro1/recterm/blob/master/youtube_screen_shot.png)](https://www.youtube.com/watch?v=K-b_44KZ4n4)
+
 ### Motivation
 
 The [`asciinema`] tool is a wonderful way to record and share terminal sessions and [`asciinema2gif`] is a awesome way to turn them into gifs. However I would like to record videos of the terminal that include audio so giving an email of instuctions using mp4 would be the best way for me.
