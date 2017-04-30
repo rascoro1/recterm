@@ -48,6 +48,11 @@ apt-get install sox
 apt-get install ffmpeg
 ```
 
+```
+If you are having difficulty installing recterm please follow the guide:
+http://linoxide.com/linux-how-to/recterm-record-videos-audio-linux-terminal/
+```
+
 ### Credits
 
 * [@rascoro1]
