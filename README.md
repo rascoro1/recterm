@@ -33,7 +33,7 @@ The .wav and .mp4 file will be generated in the 'test_terminal_session' director
 # Requires Homebrew installed. Find it at http://brew.sh/.
 # This command will install asciinema2gif and all dependencies.
 brew install asciinema
-brew install asciinema2gif
+npm install --global asciicast2gif
 brew install sox
 brew install ffmpeg
 ```
