@@ -35,12 +35,13 @@ url=$(asciinema upload $ASCII_FNAME)
 echo "URL: $url"
 # Extract the ID from the URL
 id=$(echo $url | awk -F '/' '{print $5}')
+id=`echo $id | tr -d ' '`
 echo "ID: $id"
-full_url="https://asciinema.org/api/asciicasts/$id"
+full_url="https://asciinema.org/a/$id.json"
 # Turn the ASCIINEMA file into a gif
-./to_gif.sh $GIF_FNAME $full_url
+# ./to_gif.sh $GIF_FNAME $full_url
 # asciinema2gif -o $GIF_FNAME $full_url
-
+asciicast2gif $full_url $GIF_FNAME
 ################################
 #  GIF to MP4 (No Audio)       #
 ################################
@@ -77,4 +78,4 @@ ffmpeg -i $MP4_FNAME -filter:v "setpts=$ratio*PTS" $NEW_MP4_FNAME
 ################################
 ffmpeg -i $NEW_MP4_FNAME -i $WAV_FNAME -c:v copy -c:a aac -strict experimental $FINAL_FNAME
 
-echo "Your MP4 file with audio is ready: $FINAL_NAME"
+echo "Your MP4 file with audio is ready: $FINAL_FNAME"
