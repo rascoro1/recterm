@@ -11,10 +11,10 @@ fi
 TEMP_DIR=$1
 mkdir $TEMP_DIR
 
-ASCII_FNAME="$TEMP_DIR/$TEMP_DIR"
-GIF_FNAME="$ASCII_FNAME.gif"
-MP4_FNAME="$ASCII_FNAME.mp4"
-WAV_FNAME="$ASCII_FNAME.wav"
+TTYREC_FNAME="/temp/$TEMP_DIR/$TEMP_DIR"
+GIF_FNAME="tty.gif"
+MP4_FNAME="$TTYREC_FNAME.mp4"
+WAV_FNAME="$TTYREC_FNAME.wav"
 NEW_MP4_FNAME="$1/NEW_$1.mp4"
 FINAL_FNAME="$1.mp4"
 
@@ -22,7 +22,7 @@ FINAL_FNAME="$1.mp4"
 #       Start Recording        #
 ################################
 # Start audio recording and place in background and then start terminal recording
-sox -q -d $WAV_FNAME & asciinema rec $ASCII_FNAME
+sox -q -d $WAV_FNAME & ttyrec $TTYREC_FNAME
 # Kill the sox program
 ps -ef | grep sox | awk '{print $2}' | head -n 1 | xargs kill -15
 
@@ -30,18 +30,9 @@ ps -ef | grep sox | awk '{print $2}' | head -n 1 | xargs kill -15
 ################################
 #         Get GIF              #
 ################################
-# Upload the asciinema.json to online
-url=$(asciinema upload $ASCII_FNAME)
-echo "URL: $url"
-# Extract the ID from the URL
-id=$(echo $url | awk -F '/' '{print $5}')
-id=`echo $id | tr -d ' '`
-echo "ID: $id"
-full_url="https://asciinema.org/a/$id.json"
-# Turn the ASCIINEMA file into a gif
-# ./to_gif.sh $GIF_FNAME $full_url
-# asciinema2gif -o $GIF_FNAME $full_url
-asciicast2gif $full_url $GIF_FNAME
+# Use ttygif to change this ttyrec into a gif
+ttygif $TTYREC_FNAME -f
+
 ################################
 #  GIF to MP4 (No Audio)       #
 ################################
@@ -49,6 +40,7 @@ asciicast2gif $full_url $GIF_FNAME
 # Turn that gif into an mp4 file
 ffmpeg -f gif -i $GIF_FNAME -vcodec libx264 -pix_fmt yuv420p $MP4_FNAME
 
+rm $GIF_FNAME 
 ################################
 #  Adjusting MP4 Size          #
 ##############################

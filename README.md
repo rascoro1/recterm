@@ -10,7 +10,7 @@ Record the terminal into a mp4 with audio
 
 ### Motivation
 
-The [`asciinema`] tool is a wonderful way to record and share terminal sessions and [`asciinema2gif`] is a awesome way to turn them into gifs. However I would like to record videos of the terminal that include audio so giving an email of instuctions using mp4 would be the best way for me.
+The [`ttyrec`] tool is a wonderful way to record and share terminal sessions and [`ttygif`] is a awesome way to turn them into gifs. However I would like to record videos of the terminal that include audio so giving an email of instuctions using mp4 would be the best way for me.
 
 ### Usage
 
@@ -31,21 +31,22 @@ The .wav and .mp4 file will be generated in the 'test_terminal_session' director
 
 ```bash
 # Requires Homebrew installed. Find it at http://brew.sh/.
-# This command will install asciinema2gif and all dependencies.
-brew install asciinema
-npm install --global asciicast2gif
-brew install sox
-brew install ffmpeg
+$ brew install ttyrec
+$ brew install ttygif
+$ brew install sox
+$ brew install ffmpeg
 ```
 
 #### Ubuntu
 
 ```bash
-apt-get install brew install asciinema
-apt-get install imagemagick gifsicle npm
-npm install --global phantomjs2
-apt-get install sox
-apt-get install ffmpeg
+$ sudo apt-get install imagemagick ttyrec gcc x11-apps make git
+$ git clone https://github.com/icholy/ttygif.git
+$ cd ttygif
+$ make
+$ sudo make install
+$ apt-get install sox
+$ apt-get install ffmpeg
 ```
 
 ```
@@ -62,7 +63,6 @@ http://linoxide.com/linux-how-to/recterm-record-videos-audio-linux-terminal/
 Apache.
 
 
-[`asciinema`]: https://asciinema.org/
-[`asciinema2gif`]: https://github.com/tav/asciinema2gif/
-[asciinema terminal recordings]: https://asciinema.org/
+[`ttyrec`]: http://0xcc.net/ttyrec/
+[`ttygif`]: https://github.com/sugyan/ttygif
 [@rascoro1]: https://github.com/rascoro1/
