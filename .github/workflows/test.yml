@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Make recterm executable
+      run: chmod +x ./recterm.sh
+    - name: Run recterm
+      run: ./recterm.sh
