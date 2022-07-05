@@ -31,10 +31,7 @@ The .wav and .mp4 file will be generated in the 'test_terminal_session' director
 
 ```bash
 # Requires Homebrew installed. Find it at http://brew.sh/.
-$ brew install ttyrec
-$ brew install ttygif
-$ brew install sox
-$ brew install ffmpeg
+$ brew install ttyrec ttygif sox ffmpeg
 ```
 
 #### Ubuntu
@@ -45,8 +42,7 @@ $ git clone https://github.com/icholy/ttygif.git
 $ cd ttygif
 $ make
 $ sudo make install
-$ apt-get install sox
-$ apt-get install ffmpeg
+$ apt-get install sox ffmpeg
 ```
 
 ```
